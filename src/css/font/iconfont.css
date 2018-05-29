@@ -14,60 +14,60 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 图片 */
 .icon-14:before { content: "\e60e"; }
-
+/* 好像是位置啊 */
 .icon-brand:before { content: "\e609"; }
-
+/* 一个包着一个列表图标 */
 .icon-chevronsmallright:before { content: "\e6ad"; }
 
 .icon-shouye:before { content: "\e621"; }
 
 .icon-my:before { content: "\e687"; }
-
+/* 啊? */
 .icon-tipicoorder:before { content: "\e635"; }
-
+/* 评价 */
 .icon-pingjia:before { content: "\e62a"; }
-
+/* 服务 */
 .icon-service:before { content: "\e7bb"; }
-
+/* 人 */
 .icon-people:before { content: "\f01e8"; }
-
+/* 安全,盾牌 */
 .icon-safe:before { content: "\e610"; }
-
+/* 汽车 */
 .icon-daishouhuo:before { content: "\e622"; }
-
+/* 拼团购 */
 .icon-pintuangou:before { content: "\e636"; }
-
+/* 订单 */
 .icon-dingdan:before { content: "\e602"; }
-
-.icon-icon-test:before { content: "\e611"; }
-
+/* 测试 */
+.icon-test:before { content: "\e611"; }
+/* 定位 */
 .icon-dingwei:before { content: "\e655"; }
-
+/* 向上箭头 */
 .icon-IconChevronUp:before { content: "\e6a4"; }
-
+/* 眼睛  */
 .icon-lambda_ic_eye:before { content: "\e607"; }
-
-.icon-qicheqianlian-:before { content: "\e618"; }
-
+/* 购物车 */
+.icon-qicheqianlian:before { content: "\e618"; }
+/* 圆星 */
 .icon-circle-star:before { content: "\e612"; }
-
+/* 返回 */
 .icon-back-line:before { content: "\e653"; }
-
+/* 没有折叠 */
 .icon-unfold:before { content: "\e613"; }
-
+/* 圆锁 */
 .icon-circle-lock:before { content: "\e619"; }
-
+/* 笑脸 */
 .icon-xiaolian:before { content: "\e623"; }
-
+/* 锁 */
 .icon-suo:before { content: "\e608"; }
-
+/* 锁 */
 .icon-lock:before { content: "\e6dc"; }
-
+/* 设置 */
 .icon-shezhi:before { content: "\e719"; }
-
+/* 菜单列表 */
 .icon-list:before { content: "\e6e4"; }
-
+/* 爱心 */
 .icon-xinaixin:before { content: "\e533"; }
 
