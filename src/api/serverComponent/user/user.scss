@@ -1,0 +1,16 @@
+#user{
+    table{
+        width:100%;
+        text-align:center;
+        tr{
+            height:0.266667rem;
+            td{
+                font-size:0.026667rem;
+                font-weight:bold;
+            }
+        }
+        tbody{
+            tr:nth-child(2n-1){background-color:#F9F9F9;}
+        }
+    }
+}

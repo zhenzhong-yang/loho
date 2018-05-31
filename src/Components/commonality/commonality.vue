@@ -12,8 +12,5 @@
 
 <script type="text/javascript">
     import "./commonality.scss"
-    export default {
-        
-    }
-
+    export default{}
 </script>

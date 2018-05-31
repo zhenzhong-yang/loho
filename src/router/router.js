@@ -10,6 +10,10 @@ import MyComponent from "../Components/my/my.vue"
 import RegisterComponent from "../Components/my/my-register/my-register"
 import DetailPageComponent from "../Components/detail-page/detail-page"
 import ShopingcarComponent from "../Components/shopping-car/shopping-car"
+import serverLoginComponent from "../api/serverComponent/login/login.vue"
+import serverHomeComponent from "../api/serverComponent/home/home.vue"
+import serverUserComponent from "../api/serverComponent/user/user.vue"
+import serverGoodsComponent from "../api/serverComponent/goods/goods.vue"
 const router = new VueRouter({
     routes: [
         {path: '/', component: HomeComponent, name: 'home'},
@@ -19,6 +23,11 @@ const router = new VueRouter({
         {path: "/register", component: RegisterComponent ,name: "register"},
         {path: "/detailpage", component: DetailPageComponent ,name: "detailpage"},
         {path: "/shoppingcar", component: ShopingcarComponent ,name: "shoppingcar"},
+        {path: "/admin", component: serverLoginComponent, name:"admin"},
+        {path: "/server", component: serverHomeComponent, name:"server",children:[
+            {path: "user", component:serverUserComponent, name:"serverUser"},
+            {path: "goods", component:serverGoodsComponent, name:"serverGoods"}
+        ]},
     ]
 })
 

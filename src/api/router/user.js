@@ -38,8 +38,8 @@ module.exports = {
                     console.log(result.data)
                     if(result.status){
                         let token = jwt.sign({username},'123456',{expiresIn:60*5});
-                        let ar = apiResult(result.status,token,res.data);
-                        res.send(ar);
+                        // let ar = apiResult(result.status,token,res.data);
+                        res.send({status:true,data:token,username:username});
                     }else{
                         res.send(result);
                     }
@@ -49,31 +49,52 @@ module.exports = {
         /*用户注册*/
         app.post('/reg',(req,res)=>{
             // 获取用户数据
-            let username = req.body.username;
-            let password = req.body.password;
+            console.log(req.body)
+            let username = req.body.phone;
+            let password = req.body.pwd;
 
             // 用户地址：null
             // let address = '';
 
             // 调用数据库模块
             // 注册之前先查询是否存在
-            db.select(`select * from user where username = ${username}`,function(result){
-                console.log(result)
-                if(result.status){
-                    res.send(apiResult(false));
-                }else{
-                    db.insert(`insert into user(username,password) values(${username},${password})`,function(result){
-                        console.log(result);
-                        res.send(result);
-                    });
-                }
-            });
+            if(req.body == {}){
+                res.send({status:false,data:"接收不到数据"});
+            }else{
+                db.select(`select * from user where username = ${username}`,function(result){
+                    console.log(result)
+                    if(result.status){
+                        res.send({status:false,data:"该用户已存在"});
+                    }else{
+                        db.insert(`insert into user(username,password) values(${username},"${password}")`,function(result){
+                            console.log(result);
+
+                            res.send({status:true,data:"注册成功",username:username});
+                        });
+                    }
+                });
+            }
         });
 
         /*用户的登录状态*/
         app.post('/getStatus', filter, async (req,res) => {
             res.send(apiResult(true));
         });
+
+        /*获取地址*/
+        app.post("/getRess",(req,res)=>{
+            let username = req.body.username;
+            console.log(req.body)
+            db.select(`select * from address where userId = ${username}`,function(result){
+                console.log(result)
+                if(result.status){
+                    console.log(result.data);
+                    res.send(result.data);
+                }else{
+                    res.send({status:false,data:"该用户不存在"});
+                }
+            })
+        })
 
         /*用户添加收货地址*/
         app.post("/addRess",(req,res)=>{
@@ -90,9 +111,11 @@ module.exports = {
 
         /*用户删除收货地址*/
         app.post("/delRess",(req,res)=>{
+            console.log(req.body)
             let userId = req.body.userId;
             let id = req.body.id;
             db.select(`select * from address where userId = ${userId} and id = ${id}`,function(result){
+                console.log(result.status)
                 if(result.status){
                     db.delete(`delete from address where userId = ${userId} and id = ${id}`,function(result){
                         console.log(666)

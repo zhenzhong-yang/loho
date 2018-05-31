@@ -24,11 +24,13 @@ app.all('*', function(req, res, next) {
 
 const user = require('./user.js')
 const product = require('./product.js')
+const server = require('./server.js')
 
 module.exports = {
   start(_port=88){
     user.user(app,db);
     product.product(app,db);
+    server.server(app,db);
     app.listen(_port);
   }
 }
