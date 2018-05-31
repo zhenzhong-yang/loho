@@ -1,4 +1,5 @@
 <template>
+    <div style="height:100%;">
     <div class="iconfont" style="height:100%">
         <router-view></router-view>
     </div>

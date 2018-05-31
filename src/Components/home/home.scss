@@ -1,0 +1,403 @@
+html,body{height: 100%;}
+.loho_home{
+    display:flex;
+    flex-direction:column;  
+    .loho_head{
+        // display:flex;
+        background:#fff;
+        position:fixed;top:0;left:0;right:0;height:0.8rem;z-index: 9999;
+        .loho_site{
+            width: 1.6rem;
+            height: 0.8rem;
+            float:left;
+            span{
+                font-size:0.186667rem;
+                line-height: 0.8rem;
+                margin-left:0.4rem;
+            }
+            i{
+                font-size:0.213333rem;
+            }
+        }
+        .loho_logo{
+            text-align:center;
+            line-height: 0.8rem;
+            font-size:0.32rem;
+            font-weight:bold;
+            float:left;
+            width: 1.8rem;
+            height:0.8rem;
+        }
+        .loho_menu{
+            width: 1.6rem;
+            height:0.8rem;
+            float:left;
+            ul{
+                height: 0.8rem;
+                li{
+                    float:left;
+                    width: 50%;
+                    height: 0.8rem;
+                    text-align:center;
+                    i{
+                        font-size:0.266667rem;
+                        color:black;
+                        line-height: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .loho_nav{
+        flex:1;
+        margin-bottom:0.733333rem;
+        background:#F2F2F2;
+        .swiper-container {
+            width: 100%;
+            height: 2.506667rem;
+            margin-top:0.8rem;
+             img{
+                width: 100%;
+                height: 100%;
+            }
+        }  
+        .loho_eyes{
+            height: 3.36rem;
+            background:#fff;
+            ul{
+                display:flex;
+                flex-wrap:wrap;
+                li{
+                    width: 25%;
+                    height: 1.68rem;
+                    position:relative;
+                    a{
+                        display:inline-block;
+                         width: 100%;
+                         height: 100%;
+                         color: #3e3e3e;
+                         img{
+                            width: 0.666667rem;
+                            position:absolute;
+                            left:0.293333rem;top:0.4rem;
+                        }
+                        span{
+                            font-size:0.186667rem;
+                            position:absolute;
+                            left:0.213333rem;top:1.173333rem;
+                        }
+                    }
+                }
+            }
+        }
+        .loho_ping{
+            height: 2.266667rem;
+            border-top:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            img{
+                width: 100%;
+                line-height: 2.266667rem;
+                margin:0.133333rem 0; 
+            }
+        }
+        .loho_tui{
+            height: 8.346667rem;
+            background:#fff;
+            margin-bottom:0.133333rem;
+            .loho_ren{
+                height: 0.533333rem;
+                h2{
+                    height: 0.533333rem;
+                    position:relative;
+                    .loho_i1{
+                        display:inline-block;
+                        width: 0.08rem;
+                        height: 0.24rem;
+                        background:red;
+                        position:absolute;
+                        left:0.32rem;top:0.106667rem;
+                    }
+                    .loho_sp1{
+                        font-size:0.24rem;
+                        position:absolute;
+                        left:0.453333rem;top:0.106667rem;
+                    }
+                    .loho_sp2{
+                        font-size:0.186667rem;
+                        color:#F2F2F2;
+                        position:absolute;
+                        right:0.453333rem;top:0.106667rem;
+                    }
+                    .loho_i2{
+                        font-size:0.186667rem;
+                        position:absolute;
+                        right:0.293333rem;top:0.133333rem;
+                        color:#F2F2F2;
+                    }
+                } 
+            }
+            img{
+                width: 100%;
+            }
+            ul{
+                display:flex;
+                flex-wrap:wrap;
+                li{
+                    width:50%;
+                    height: 2.16rem;
+                    border-right:1px solid #e1e1e1;
+                    border-bottom:1px solid #e1e1e1;
+                    padding:0.16rem 0.16rem;
+                    text-align:center;
+                    p{
+                        font-size:0.186667rem;
+                    }
+                    :nth-of-type(2){
+                        color:#c1c1c1;
+                        margin-top:0.053333rem;
+                        margin-bottom:0.4rem;
+                    }
+                }
+            }
+        }
+        .loho_ren{
+            height: 0.533333rem;
+            h2{
+                height: 0.533333rem;
+                position:relative;
+                .loho_i1{
+                    display:inline-block;
+                    width: 0.08rem;
+                    height: 0.24rem;
+                    background:red;
+                    position:absolute;
+                    left:0.32rem;top:0.106667rem;
+                }
+                .loho_sp1{
+                    font-size:0.24rem;
+                    position:absolute;
+                    left:0.453333rem;top:0.106667rem;
+                }
+                .loho_sp2{
+                    font-size:0.186667rem;
+                    color:#F2F2F2;
+                    position:absolute;
+                    right:0.453333rem;top:0.106667rem;
+                }
+                .loho_i2{
+                    font-size:0.186667rem;
+                    position:absolute;
+                    right:0.293333rem;top:0.133333rem;
+                    color:#F2F2F2;
+                }
+            } 
+        }
+        .loho_new{
+            height: 5.466667rem;
+            background:#fff;
+            margin-bottom:0.133333rem;
+            border-top:1px solid #e1e1e1;
+            img{
+                width: 100%;
+            }
+            .loho_n{
+                height: 3.613333rem;
+                display:flex;
+                text-align:center;
+                p{
+                    font-size:0.186667rem;
+                }
+                .loho_left{
+                    width: 50%;
+                    border-right:1px solid #e1e1e1;
+                    padding:0 0.133333rem;
+                    border-bottom:1px solid #e1e1e1;
+                    .loho_l1{
+                        margin-top:0.933333rem;
+                        margin-bottom:0.053333rem;
+                    }
+                    .loho_l2{
+                        margin-bottom:40px;
+                    }
+                }
+                ul{
+                    width: 50%;
+                    li{
+                        height: 50%;
+                        border-bottom:1px solid #e1e1e1;
+                        padding:0.133333rem 0.133333rem;
+                    }
+
+                }
+            }
+        }
+        .loho_yin{
+            height: 6.213333rem;
+            .loho_mei{
+                height: 4.333333rem;
+                ul{
+                    display:flex;
+                    flex-wrap:wrap;
+                    li{
+                        width: 50%;
+                        padding:0.133333rem 0.133333rem;
+                        text-align:center;
+                        height: 2.173333rem;
+                        p{
+                            font-size:0.186667rem;
+                        }
+                        :nth-of-type(1){
+                            margin-top:6px;
+                        }
+                        :nth-of-type(2){
+                            color:#c1c1c1;
+                            margin-bottom:0.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        .loho_like{
+            height: 0.826667rem;
+            border-top:1px solid #c1c1c1;
+            border-bottom:1px solid #c1c1c1;
+            background:#fff;
+            text-align:center;
+            line-height: 0.8rem;
+            color:#222;
+            span{
+                font-size:0.24rem;
+            }
+            i{
+                font-size:0.24rem;
+            }
+        }
+        .loho_jia{
+            ul{
+                background:#fff;
+                height: 3.333333rem;
+                display:flex;
+                border-bottom:1px solid #c1c1c1;
+                display:none;
+                li{
+                    width: 50%;
+                    padding:0.693333rem 0.133333rem 0.266667rem 0.133333rem;
+                    text-align:center;
+                    p{
+                        font-size:0.186667rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    :nth-of-type(2){
+                        margin-top:0.506667rem;
+                        margin-bottom:0.266667rem;
+                    }
+                    :nth-of-type(3){
+                        color:#E51C23;
+                        font-weight:bold;
+                    }
+                }
+            }
+            >p{
+                height: 0.733333rem;
+                color:#ababab;
+                font-size:0.186667rem;
+                text-align:center;
+                line-height: 0.733333rem; 
+            }
+        }
+        .loho_ti{
+            height: 3.653333rem;
+            background:#1d1d1d;
+            color:#fff;
+            margin-bottom:0.2rem;
+            ul{
+                li{
+                    border-bottom:2px solid #000;
+                }
+                .loho_tii1{
+                    height: 1.146667rem;
+                    display:flex;
+                    p{
+                        width:50%;
+                        text-align:center;
+                        i{
+                            font-size:0.32rem;
+                            color:red;
+                        }
+                        span{
+                            font-size:0.186667rem;
+                        }
+                    }
+                    .loho_p1{
+                        position:relative;
+                        i{
+                            position:absolute;
+                            left:0.106667rem;top:0.373333rem;
+                        }
+                        span{
+                            font-size:0.16rem;
+                        }
+                        .loho_tisp1{
+                            position:absolute;
+                            left:0.506667rem;top:0.32rem;
+                        }
+                        .loho_tisp2{
+                            position:absolute;
+                            left:0.493333rem;top:0.546667rem;
+                            color:#666;
+                        }
+                    }
+                    .loho_p2{
+                        position:relative;
+                        i{
+                            position:absolute;
+                            left:0.32rem;top:0.346667rem;
+                        }
+                        span{
+                            position:absolute;
+                            left:0.693333rem;top:0.373333rem; 
+                        }
+                    }
+                }
+                .loho_tii2{
+                    height: 1.28rem;
+                    text-align:center;
+                    :nth-of-type(1){
+                        font-size:0.426667rem;
+                        font-weight:bold;
+                        padding-top:0.213333rem;
+                    }
+                    :nth-of-type(2){
+                        font-size:0.16rem;
+                    }
+                }
+                .loho_tii3{
+                    height: 1.226667rem;
+                    border-bottom:none;
+                    font-size:0.16rem;
+                    padding:0.186667rem 0.213333rem;
+                    text-align:center;
+                }
+            }
+        }
+    }
+    .loho_fan{
+        width: 0.64rem;
+        height: 0.64rem;
+        background:rgba(255,255,255,.6);
+        position:fixed;
+        right:0.186667rem;bottom:0.96rem;
+        border:1px solid #e1e1e1;
+        border-radius:50%;
+        z-index:10000;
+        text-align:center;
+        display:none;
+        i{
+            font-size:0.24rem;
+            color:#666;
+            line-height: 0.533333rem;
+        }
+    }
+}

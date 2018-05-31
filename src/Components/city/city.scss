@@ -1,0 +1,213 @@
+html,body{height: 100%;}
+.loho_city{
+    height:100%;
+    background:#f2f2f2;
+    display:flex;
+    flex-direction:column; 
+    .loho_xuan{
+        display:flex;
+        background:#fff;
+        margin-bottom:0.133333rem;
+        border-bottom:1px solid #e1e1e1;
+        position:fixed;top:0;left:0;right:0;z-index: 9999;
+        .loho_back{
+            width: 0.8rem;
+            height: 0.8rem;
+            text-align:center;
+            position:relative;
+            i{
+                position:absolute;
+                left:0.24rem;top:0.24rem;
+                font-size:0.266667rem;
+            }
+        }
+        .loho_xz{
+            flex:1;
+            font-size:0.24rem;
+            line-height: 0.8rem;
+            span{
+                margin-left:1.226667rem;
+            }
+        }
+        .loho_menu{
+            width: 1.6rem;
+            height:0.8rem;
+            float:left;
+            ul{
+                height: 0.8rem;
+                li{
+                    float:left;
+                    width: 50%;
+                    height: 0.8rem;
+                    text-align:center;
+                    i{
+                        font-size:0.32rem;
+                        color:black;
+                        line-height: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .loho_nav{
+        flex:1;
+        width: 100%;
+        position:absolute;
+        left:0;top:0.933333rem;
+        .loho_dang{
+            height: 0.666667rem;
+            
+            margin-bottom:0.133333rem;
+            background:#fff;
+            border-top:1px solid #e1e1e1;
+            border-bottom:1px solid #e1e1e1;
+            
+            .loho_i1{
+                font-size:0.266667rem;
+                position:absolute;
+                left:0.253333rem;top:0.133333rem;
+            }
+            .loho_sp1{
+                font-size:0.186667rem;
+                position:absolute;
+                left:0.6rem;top:0.146667rem;
+            }
+            .loho_sp2{
+                font-size:0.213333rem;
+                position:absolute;
+                left:1.6rem;top:0.133333rem;
+            }
+            .loho_i2{
+                font-size:0.32rem;
+                position:absolute;
+                right:0.16rem;top:0.106667rem;
+            }
+        }
+        .loho_re{
+            background:#fff;
+            margin-bottom:0.133333rem;
+            >:nth-of-type(1){
+                height: 0.573333rem;
+                border-bottom:1px solid #e1e1e1;
+                border-top:1px solid #e1e1e1;
+                padding-left:0.16rem;
+                font-size:0.186667rem;
+                line-height: 0.533333rem;
+            }
+            >:nth-of-type(2){
+                height: 0.666667rem;
+                border-bottom:1px solid #e1e1e1;
+                display:flex;
+                text-align:center;
+                line-height: 0.666667rem;
+                span{
+                    font-size:0.186667rem;
+                    width:25%;
+                }
+            }
+        }
+        .loho_citys{
+            background:#fff;
+            p{
+                border-top:1px solid #e1e1e1;
+                height: 0.56rem;
+                font-size:0.186667rem;
+                padding-left:0.16rem;
+                line-height: 0.533333rem;
+            }
+            ul{
+                display:flex;
+                flex-wrap:wrap;
+                border-top:1px solid #e1e1e1;
+                li{
+                    width: 33.333%;
+                    height: 0.8rem;
+                    text-align:center;
+                    font-size:0.186667rem;
+                    line-height: 0.8rem;
+                    border-right:1px solid #e1e1e1;
+                    border-bottom:1px solid #e1e1e1;
+                }
+                :nth-of-type(3){
+                    border-right:none;
+                }
+                :nth-of-type(6){
+                    border-right:none;
+                }
+                :nth-of-type(9){
+                    border-right:none;
+                }
+                :nth-of-type(12){
+                    border-right:none;
+                }
+                :nth-of-type(15){
+                    border-right:none;
+                }
+                :nth-of-type(18){
+                    border-right:none;
+                }
+                :nth-of-type(21){
+                    border-right:none;
+                }
+            }
+        }
+        .loho_cs{
+            p{
+                height:0.44rem;
+                font-size:0.186667rem;
+                font-weight:bold;
+                padding-left:0.186667rem;
+                line-height: 0.44rem;
+            }
+            ul{
+                background:#fff;
+                border-top:1px solid #e1e1e1;
+                border-bottom:1px solid #e1e1e1;
+                display:flex;
+                flex-wrap:wrap;
+                li{
+                    height: 0.8rem;
+                    width: 1.666667rem;
+                    border-right:1px solid #e1e1e1;
+                    border-bottom:1px solid #e1e1e1;
+                    font-size:0.186667rem;
+                    text-align:center;
+                    line-height: 0.8rem;
+                }
+            }
+        }
+        
+    }
+    .loho_list{
+        position:fixed;
+        right:0.08rem;top:0.96rem;
+        background:#fff;
+        z-index:999;
+        >::before,::after{
+            content:'';
+            position:absolute;top:-0.16rem;left:1.56rem;
+            border:0.08rem solid transparent;border-bottom-color:#e1e1e1;
+        }
+        >::after{top:-0.146667rem;border-bottom-color:#fff;}
+        ul{
+            width: 2.0rem;
+            border:1px solid #e1e1e1;
+            li{
+                height: 0.626667rem;
+                text-align:left;
+                padding-left:0.373333rem;
+                line-height: 0.626667rem;
+                i{
+                    font-size:0.213333rem;
+                    margin-right:0.16rem;
+                }
+                span{
+                    font-size:0.186667rem;
+                }
+            }
+            a{
+                color:#555;
+            }
+        }
+    }
+}
