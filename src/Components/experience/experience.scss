@@ -1,0 +1,190 @@
+html,body{height: 100%;}
+.loho_experience{
+    height:100%;
+    background:#f2f2f2;
+    display:flex;
+    flex-direction:column;
+    .loho_xuan{
+        display:flex;
+        background:#fff;
+        border-bottom:1px solid #e1e1e1;
+        position:fixed;top:0;left:0;right:0;z-index: 9999;
+        .loho_back{
+            width: 0.8rem;
+            height: 0.8rem;
+            text-align:center;
+            position:relative;
+            i{
+                position:absolute;
+                left:0.24rem;top:0.24rem;
+                font-size:0.266667rem;
+            }
+        }
+        .loho_xz{
+            flex:1;
+            font-size:0.24rem;
+            line-height: 0.8rem;
+            span{
+                margin-left:0.96rem;
+            }
+        }
+        .loho_menu{
+            width: 1.6rem;
+            height:0.8rem;
+            float:left;
+            ul{
+                height: 0.8rem;
+                li{
+                    float:left;
+                    width: 50%;
+                    height: 0.8rem;
+                    text-align:center;
+                    i{
+                        font-size:0.32rem;
+                        color:black;
+                        line-height: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .loho_dian{
+        flex:1;
+        margin-top:0.8rem;
+        width: 100%;
+        >ul{
+            display:flex;
+            li{
+                width: 50%;
+                height: 0.666667rem;
+                background:#fff;
+                text-align:center;
+                border-bottom:1px solid #e1e1e1;
+                span{
+                    display:inline-block;
+                    width: 100%;
+                    border-right:1px solid #e1e1e1;
+                    font-size:0.186667rem;
+                    line-height: 0.186667rem;
+                    margin-top:0.213333rem;
+                }
+            }
+        }
+        .loho_lie{
+            width: 100%;
+            .loho_tiyan{
+                margin:0.133333rem 0;
+                padding:0 0.24rem 0 0.133333rem;
+                background:#fff;
+                height: 0.586667rem;
+                font-size:0.186667rem;
+                p{
+                   line-height: 0.586667rem;
+                   .icon-chevronsmallright{
+                        font-size:0.186667rem;
+                   }
+                }
+            }
+            .loho_dianpu{
+                background:#fff;
+                .loho_dp{
+                    // height: 4.88rem;
+                    margin:0 0.133333rem;
+                    >h2{
+                        position:relative;
+                        font-size:0.186667rem;
+                        height: 0.533333rem;
+                        span{
+                            position:absolute;
+                            left:0;top:0.133333rem;
+                        }
+                        i{
+                            color:red;
+                            position:absolute;
+                            right:0.106667rem;top:0.133333rem;
+                            font-size:0.186667rem;
+                        }
+                    }
+                }
+            }
+            .loho_din{
+                background:#fff;
+                padding:0 0.133333rem;
+                height: 4.346667rem;
+                border-bottom:1px solid #e1e1e1;
+                p{
+                    height: 0.36rem;
+                    font-size:0.186667rem;
+                    span{
+                        font-size:0.16rem;
+                    }
+                    .icon-location{
+                        font-size:0.186667rem;
+                    }
+                }
+                .loho_img{
+                    width: 100%;
+                    height: 2.626667rem;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius:0.133333rem;
+                }
+                .loho_dizhi{
+                    margin-top:0.133333rem;
+                    font-size:0.16rem;
+                }
+                .loho_yu{
+                    margin-top:0.106667rem;
+                    button{
+                        border:none;
+                        width: 2.373333rem;
+                        height: 0.586667rem;
+                        background:#e8343b;
+                        color:#fff;
+                        border-radius:0.053333rem;
+                        margin-right:1.0rem;
+                        font-size:0.186667rem;
+                    }
+                    i{
+                        font-size:0.426667rem;
+                        color:#ec1c24;
+                    }
+                }
+            }
+        }
+    }
+    .loho_list{
+        position:fixed;
+        right:0.08rem;top:0.96rem;
+        background:#fff;
+        z-index:999;
+        >::before,::after{
+            content:'';
+            position:absolute;top:-0.16rem;left:1.56rem;
+            border:0.08rem solid transparent;border-bottom-color:#e1e1e1;
+        }
+        >::after{top:-0.146667rem;border-bottom-color:#fff;}
+        ul{
+            width: 2.0rem;
+            border:1px solid #e1e1e1;
+            li{
+                height: 0.626667rem;
+                text-align:left;
+                padding-left:0.373333rem;
+                line-height: 0.626667rem;
+                i{
+                    font-size:0.213333rem;
+                    margin-right:0.16rem;
+                }
+                span{
+                    font-size:0.186667rem;
+                }
+            }
+            a{
+                color:#555;
+            }
+        }
+    }
+}
