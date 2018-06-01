@@ -1,0 +1,419 @@
+.loho_menber{
+    height:100%;
+    .menber_header{
+        display:flex;
+        position:fixed;        
+        width:100%;
+        height: 0.6rem;
+        background:#fff;
+        li{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            height:0.733333rem;
+            font-size:20px;
+            text-align:center;
+            line-height:0.733333rem;
+            a{
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                color:#333;
+                i{
+                    font-size:0.266667rem;
+                }
+                .tb1{
+                    margin-right:0.666667rem;
+                    font-size:0.24rem;
+                }
+            }
+        }
+        .menber_hy{
+            margin-left:0.333333rem;
+        }
+        .menber_sy{
+            margin-left:0.066667rem;
+        }
+        .menber_sz{
+            margin-left:-0.8rem;
+            margin-right:-0.333333rem;
+            a{
+                .tb3{font-size:0.4rem;}
+            }
+        }
+    }  
+    .menber_nav{
+        background:#ccc;
+        flex:1;
+        width: 100%;
+        padding-top:0.6rem;
+        .nav_0{
+            height: 2.0rem;
+            background: url(http://img.loho88.com/images/loho-m/bg1.jpg) no-repeat;
+            background-size: 100% 100%;
+            .menber_nav_0{
+                .nav_img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 22%;
+                    margin-bottom: .4rem;
+                    padding-top:0.2rem;
+                }
+                .user-name{
+                    width: 2.24rem;
+                    height: 0.373333rem;
+                    background:red;
+                    color: #FFF;
+                    margin: -0.2rem auto;
+                    border-radius: 0.266667rem;
+                    font-size: .8rem;
+                    background-color: rgba(0,0,0,.33);
+                    font-size:0.266667rem;
+                    text-align:center;
+                    line-height:0.373333rem;
+                }
+            }
+        }
+        .nav_1{
+            height:80px;
+            .menber_nav_1{
+                display:flex;
+                width:100%;
+                background:#fff;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.733333rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    margin:10px 0px;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:space-around;
+                        color:#333;
+                        i{
+                            font-size:0.373333rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+            } 
+        }
+        .nav_2{
+            height: 0.8rem;
+            .menber_nav_2{
+                margin-top:0.226667rem;
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.8rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.8rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:space-around;
+                        color:#333;
+                        i{
+                            font-size:0.373333rem;
+                        }
+                        span{
+                            margin-top:-29px;
+                            margin-bottom:-25px;
+                            margin-right:48px;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_2_1{
+                   margin-right:-0.666667rem;
+                   margin-left:-0.466667rem;
+                }
+                .nav_2_2{
+                    margin-right: 1.866667rem;
+                    line-height:0.666667rem;
+                }
+                .nav_2_3{
+                    margin-right:-0.6rem;
+                }
+            } 
+        }
+        .nav_3{
+            height: 0.666667rem;
+            .menber_nav_3{
+                margin-top:0.066667rem;
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:space-around;
+                        color:#333;
+                        i{
+                            font-size:0.373333rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_3_1{
+                   
+                }
+                .nav_3_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_3_3{
+                    
+                }
+            } 
+        }
+        .nav_4{
+            height: 0.666667rem;
+            .menber_nav_4{
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        color:#333;
+                        line-height:0.666667rem;
+                        i{
+                            font-size:0.373333rem;
+                            line-height:0.666667rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_4_1{
+                   
+                }
+                .nav_4_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_4_3{
+                    
+                }
+            } 
+        }
+        .nav_5{
+            height: 0.666667rem;
+            .menber_nav_5{
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        color:#333;
+                        line-height:0.666667rem;
+                        i{
+                            font-size:0.373333rem;
+                            line-height:0.666667rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_5_1{
+                   
+                }
+                .nav_5_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_5_3{
+                    
+                }
+            } 
+        }
+        .nav_6{
+            height: 0.666667rem;
+            .menber_nav_6{
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        color:#333;
+                        line-height:0.666667rem;
+                        i{
+                            font-size:0.373333rem;
+                            line-height:0.666667rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_6_1{
+                   
+                }
+                .nav_6_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_6_3{
+                    
+                }
+            } 
+        }
+        .nav_7{
+            height: 0.666667rem;
+            .menber_nav_7{
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    color:#333;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        color:#333;
+                        line-height:0.666667rem;
+                        i{
+                            font-size:0.373333rem;
+                            line-height:0.666667rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_7_1{
+                   
+                }
+                .nav_7_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_7_3{
+                    
+                }
+            } 
+        }
+        .nav_8{
+            height: 0.666667rem;
+            .menber_nav_8{
+                display:flex;
+                width:100%;
+                background:#fff;
+                border-top:0.013333rem solid #ccc;
+                li{
+                    flex:1;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    height:0.666667rem;
+                    font-size:0.16rem;
+                    text-align:center;
+                    line-height:0.666667rem;
+                    a{ 
+                        height:100%;
+                        display:flex;
+                        flex-direction:column;
+                        color:#333;
+                        line-height:0.666667rem;
+                        i{
+                            font-size:0.373333rem;
+                            line-height:0.666667rem;
+                        }
+                    }
+                    i{
+                        font-size:0.373333rem;
+                    }
+                }
+                .nav_8_1{
+                   
+                }
+                .nav_8_2{
+                    margin-right:2.933333rem;
+                    line-height:0.666667rem;
+                }
+                .nav_8_3{
+                    
+                }
+            } 
+        }
+    }
+}
