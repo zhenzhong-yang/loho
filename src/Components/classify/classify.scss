@@ -1,0 +1,84 @@
+.loho_classify{
+    .header{
+        height:0.466667rem;
+        background:#333333;
+        display:flex;
+        position:fixed;
+        width:100%;
+        z-index:1000;
+        li{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            line-height:0.466667rem;
+            font-size:16px;
+            text-align:center;
+            a{ 
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                color:#fff;
+                i{
+                    color:#fff;
+                    margin-right:1.266667rem;
+                }
+            }
+            i{
+                color:#fff;
+                 margin-right:-1.066667rem;
+            }
+        }
+    }  
+    .shopping{
+        padding-top:100px;
+        .shopping_1{
+            .shopping_2{
+                height: 2.2rem;
+                width: 2.266667rem;
+                margin:0 0.106667rem;
+                float:left;
+                list-style:none;
+                margin-bottom:0.163333rem;
+                img{
+                    height: 0.906667rem;
+                    width: 2.619333rem;
+                    background:blue;
+                    margin:0 auto;
+                    margin-bottom:0.266667rem;
+                    margin-left:-0.146667rem;
+                }
+                .name{
+                    height: 0.45rem;
+                    width: 100%;
+                    font-size:18px;
+                    background:#ccc;
+                    text-overflow:ellipsis;
+                    overflow:hidden;
+                    color:#000;
+                }
+                .price{
+                    margin-top:0.066667rem;
+                    .price1{
+                        color:red;
+                        font-size:0.186667rem;
+                    }
+                    .price2{
+                        color:#ccc;
+                        font-size:0.16rem;
+                        float:right;
+                        margin-right:0.266667rem;
+                        margin-top:0.04rem;
+                        text-decoration:line-through;
+                    }
+                }
+                .addCar{
+                    margin:0 auto;
+                    background:yellow;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}

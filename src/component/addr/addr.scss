@@ -1,0 +1,80 @@
+.loho_addr{
+    height:100%;
+    .addr_header{
+        display:flex;
+        position:fixed;
+        height: 0.733333rem;
+        width:100%;
+        background:#fff;
+        padding-bottom:0.733333rem;
+        li{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            height:0.733333rem;
+            font-size:0.266667rem;
+            text-align:center;
+            line-height:0.733333rem;
+            a{ 
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                color:#333;
+                i{
+                    margin-right:1.2rem;
+                    font-size:0.266667rem;
+                }
+            }
+        }
+    }  
+    .addr_nav{
+        background:#F2F2F2;
+        flex:1;
+        width: 100%;
+        padding-top:4.6rem;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        padding-bottom:4.666667rem;
+        .addr_nav_0{
+            height: 45%;
+            font-size: .8rem;
+            display: -webkit-box;
+            -webkit-box-align: center;
+            -webkit-box-pack: end;
+            -webkit-box-orient: vertical;
+            text-align: center;
+            li{
+                display: block;
+                width: 100%;
+                font-size:0.266667rem;
+            }
+        }
+    }
+    .loho_commonality{
+        height:100%;
+        ul{
+            display:flex;
+            position:fixed;
+            bottom:0;
+            width:100%;
+            background:red;
+            li{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                height:0.733333rem;
+                font-size:0.16rem;
+                text-align:center;
+                // line-height:0.733333rem;
+                span{
+                    color:#fff;
+                    font-size:0.266667rem;
+                }
+            }
+        }  
+    }
+}
