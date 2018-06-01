@@ -31,9 +31,9 @@ module.exports = {
                 let goodsId = item.goodsId;
                 db.delete(`delete from cart where userId = ${userId} and goodsId = ${goodsId}`,function(result){
                     console.log(result.status)
-                    res.send({status:true});
                 })
             })
+            res.send({status:true});
         })
 
         /*添加商品到购物车*/
@@ -90,20 +90,6 @@ module.exports = {
             }else{
                 res.send({status:false,data:"您的参数可能不正确，请重新确认"});
             }
-        });
-
-        /*商品模糊查询*/
-        app.get("/searchGoods",(req,res)=>{
-            console.log(req.query.search)
-            let search = req.query.search;
-            db.select(`select * from goods where title like '%${search}%' `,function(result){
-                console.log(result.status)
-                if(result.status){
-                    res.send(result.data);
-                }else{
-                    res.send({status:false,data:"没有类似的商品"});
-                }
-            })
         });
 
         /*商品价格排序*/

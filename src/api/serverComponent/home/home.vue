@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="box">
         <div class="header">
             <jheader></jheader>
         </div>
