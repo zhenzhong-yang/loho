@@ -3,7 +3,7 @@
         <ul class="header">
             <li class="return"><router-link to="/"><i class="icon iconfont icon-back-line"></i></router-link></li>
             <li class="yx"><router-link to="list"><span>{{$route.params.field}}</span></router-link></li>
-            <li class="return car"><router-link to="/shoppingcar"><i class="icon iconfont icon-qicheqianlian-"></i></router-link></li>
+            <li class="return car"><router-link to="/shoppingcar"><i class="icon iconfont icon-qicheqianlian-" style="font-size:24px;"></i></router-link></li>
             <li class="showMenu"><i class="icon iconfont icon-list" @click="show"></i></li>
         </ul>
         <ul v-show="this.data" class="f-dropdown">
@@ -22,12 +22,14 @@
             </ul>
             <ul class="shopping_1">
                 <li  v-for="item in goods" class="shopping_2" :id="item.goodsId"><router-link :to="{name:'shoppingcar',params: {goodsId:item.goodsId}}">
+                    <span class="isNew" v-if="item.isNew == 'true'">{{isNew}}</span>
                     <img :src="item.img">
                     <h3 class="name">{{item.title}}</h3>
                     <h4 class="price">
-                        <span class="price1">优惠价￥{{item.price}}</span>
+                        <span class="price1">￥{{item.price}}</span>
                     </h4>
                     <p class="salesNew">{{item.salesNum}}人购买</p></router-link>
+
                 </li>
             </ul>
         </div>
@@ -41,7 +43,8 @@
             return {
                 data: false,
                 goods:[],
-                field:''
+                field:'',
+                isNew:'New'
             }
         },
         methods : {
