@@ -45,7 +45,7 @@
             List
         },
         mounted(){
-            http.get("getGoods",{field:"团购"}).then((res) => {
+            http.get("/getGoods",{field:"团购"}).then((res) => {
                 this.goods = res.results
                 console.log(this.goods);
             })

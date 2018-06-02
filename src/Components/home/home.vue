@@ -33,13 +33,13 @@
             </div>
             <div class="loho_eyes">
                 <ul>
-                    <li><router-link to="/list/新品上市"><img src="http://img.loho88.com/images/loho-m/xpss.png" alt="" /><span>新品上市</span></router-link></li>
-                    <li><router-link to="/list/光学眼镜"><img src="http://img.loho88.com/images/loho-m/gxyj.png" alt="" /><span>光学眼镜</span></router-link></li>
-                    <li><router-link to="/list/太阳眼镜"><img src="http://img.loho88.com/images/loho-m/tyyj.png" alt="" /><span>太阳眼镜</span></router-link></li>
-                    <li><router-link to="/list/儿童眼镜"><img src="http://img.loho88.com/images/loho-m/etyj.png" alt="" /><span>儿童眼镜</span></router-link></li>
-                    <li><router-link to="/list/品牌镜片"><img src="http://img.loho88.com/images/loho-m/ppjp.png" alt="" /><span>品牌镜片</span></router-link></li>
-                    <li><router-link to="/list/功能眼镜"><img src="http://img.loho88.com/images/loho-m/gnyj.png" alt="" /><span>功能眼镜</span></router-link></li>
-                    <li><router-link to="/list/隐形眼镜"><img src="http://img.loho88.com/images/loho-m/mtyx.png" alt="" /><span>隐形眼镜</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'新品上市'}}"><img src="http://img.loho88.com/images/loho-m/xpss.png" alt="" /><span>新品上市</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'光学眼镜'}}"><img src="http://img.loho88.com/images/loho-m/gxyj.png" alt="" /><span>光学眼镜</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'太阳眼镜'}}"><img src="http://img.loho88.com/images/loho-m/tyyj.png" alt="" /><span>太阳眼镜</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'儿童眼镜'}}"><img src="http://img.loho88.com/images/loho-m/etyj.png" alt="" /><span>儿童眼镜</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'品牌镜片'}}"><img src="http://img.loho88.com/images/loho-m/ppjp.png" alt="" /><span>品牌镜片</span></router-link></li>
+                    <li><router-link :to="{name:'list',params:{field:'功能眼镜'}}"><img src="http://img.loho88.com/images/loho-m/gnyj.png" alt="" /><span>功能眼镜</span></router-link></li>
+                    <li><router-link  :to="{name:'list',params:{field:'隐形眼镜'}}"><img src="http://img.loho88.com/images/loho-m/mtyx.png" alt="" /><span>隐形眼镜</span></router-link></li>
                     <li><router-link to="/experience"><img src="http://img.loho88.com/images/loho-m/cztyd.png" alt="" /><span>查找体验店</span></router-link></li>
                 </ul>
             </div>
