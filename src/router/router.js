@@ -15,6 +15,7 @@ import ChatboxComponent from "../component/chatbox/chatbox.vue"
 import MenberComponent from "../component/menber/menber.vue"
 import CenterComponent from "../component/center/center.vue"
 import AddrComponent from "../component/addr/addr.vue"
+import ListComponent from "../components/list/list.vue"
 
 import RegisterComponent from "../Components/my/my-register/my-register"
 import DetailPageComponent from "../Components/detail-page/detail-page"
@@ -37,6 +38,7 @@ const router = new VueRouter({
         {path: "/menber", component: MenberComponent ,name: "menber"},
         {path: "/center", component: CenterComponent ,name: "center"},
         {path: "/addr", component: AddrComponent ,name: "addr"},
+        {path: "/list", component: ListComponent ,name: "list"},
 
         {path: "/register", component: RegisterComponent ,name: "register"},
         {path: "/detailpage", component: DetailPageComponent ,name: "detailpage"},

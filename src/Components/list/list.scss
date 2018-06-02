@@ -1,0 +1,166 @@
+.loho_list{
+    .header{
+        height:0.466667rem;
+        background:#fff;
+        display:flex;
+        position:fixed;
+        width:100%;
+        height: 0.8rem;
+        z-index:1000;
+        border-bottom:0.013333rem solid #ccc;
+        li{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            line-height:0.466667rem;
+            font-size:16px;
+            text-align:center;
+            a{ 
+                height:100%;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                color:#000;
+                font-size:0.266667rem;
+                i{
+                    color:#000;
+                    margin-right:1.266667rem;
+                    font-size:0.266667rem;
+                    margin-left:0.066667rem;
+                }
+            }
+            i{
+                color:#000;
+                 margin-right:-1.066667rem;
+                 font-size:0.266667rem;
+            }
+        }
+        .yx{
+            margin-left:45px;
+            margin-right:-180px;
+        }
+        .car{
+            margin-right:-215px;
+            margin-left:270px;
+        }
+        .showMenu{
+            margin-right:0.293333rem;
+        }
+    }  
+    .f-dropdown{
+        position: fixed;
+        top:80px;
+        display: block;
+        width: auto!important;
+        right: .5rem;
+        margin-top: 13px;
+        border: 1px solid #e1e1e1;
+        background:#fff;
+        height: 95px;
+        width: 150px;
+        margin-right:-0.4rem;
+        z-index:1000;
+        li{
+            line-height: 40px;
+            font-size:0.2rem;
+            margin:0.08rem 0.133333rem;
+            margin-top:0.08rem;
+            i{
+                font-size:25px;
+                margin-right:10px;
+            }
+        }
+    }
+    .nav{
+        
+    }
+    .shopping{
+        padding-top:100px;
+        .list{
+            display:flex;
+            width:100%;
+            border-bottom:0.013333rem solid #ccc;
+            margin-bottom:10px;
+            li{
+                flex:1;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                line-height:0.6rem;
+                font-size:20px;
+                text-align:center;
+                height: 45px;
+                margin-bottom:10px;
+            }
+            .showM{
+                position: relative;
+                margin-left:0.133333rem;
+                span{
+                        float:left;
+                        position: absolute;
+                        left:0.133333rem;
+                        top:-0.066667rem;
+                    }
+                    .tps{
+                        float:right;
+                        color:#000;
+                        position: absolute;
+                        left:0.666667rem;
+                        top:-0.066667rem;
+                    }
+            }
+        } 
+        .shopping_1{
+            .shopping_2{
+                height: 3.006667rem;
+                width: 2.333333rem;
+                margin-right:36px;
+                float:left;
+                list-style:none;
+                border:0.013333rem solid #ccc;
+                margin-bottom:0.163333rem;
+                img{
+                    height: 1.466667rem;
+                    width: 2.066667rem;
+                    background:blue;
+                    margin:30px auto;
+                    margin-bottom:0.266667rem;
+                }
+                .name{
+                    height: 0.45rem;
+                    width: 90%;
+                    font-size:16px;
+                    line-height:22px;
+                    text-overflow:ellipsis;
+                    overflow:hidden;
+                    color:#000;
+                    margin-left:0.133333rem;
+                }
+                .price{
+                    margin-top:0.066667rem;
+                    margin-left:0.133333rem;
+                    .price1{
+                        color:red;
+                        font-size:0.186667rem;
+                    }
+                    .price2{
+                        color:#ccc;
+                        font-size:0.16rem;
+                        float:right;
+                        margin-top:0.04rem;
+                        text-decoration:line-through;
+                    }
+                }
+                .salesNew{
+                    float:right;
+                    margin-top:-0.2rem;
+                    margin-right:0.133333rem;
+                }
+            }
+            .shopping_2:nth-child(2n){
+                margin-right:0px;
+            }
+        }
+    }
+}
