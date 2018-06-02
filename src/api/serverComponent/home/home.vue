@@ -7,9 +7,9 @@
             <div class="nav">
                 <jnav></jnav>
             </div>
-            <div class="container">
+            <main>
                 <router-view></router-view>
-            </div>
+            </main>
         </div>
     </div>
 </template>

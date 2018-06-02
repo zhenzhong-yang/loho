@@ -33,9 +33,8 @@ module.exports = {
             let password = req.body.password;
             console.log(username,password);
             
-            db.select(`select * from user where username = ${username} and password = ${password} `,
-                function(result){
-                    console.log(result.data)
+            db.select({_sql:'SELECT * FROM `user` WHERE `username` = ? and `password` = ?' ,data: [username,password],_callback:function(result){
+                    console.log(result.status)
                     if(result.status){
                         let token = jwt.sign({username},'123456',{expiresIn:60*5});
                         // let ar = apiResult(result.status,token,res.data);
@@ -43,7 +42,7 @@ module.exports = {
                     }else{
                         res.send(result);
                     }
-            });       
+            }});       
         });
 
         /*用户注册*/
@@ -61,7 +60,7 @@ module.exports = {
             if(req.body == {}){
                 res.send({status:false,data:"接收不到数据"});
             }else{
-                db.select(`select * from user where username = ${username}`,function(result){
+                db.select({_sql:`select * from user where username = ${username}` ,_callback:function(result){
                     console.log(result)
                     if(result.status){
                         res.send({status:false,data:"该用户已存在"});
@@ -72,7 +71,8 @@ module.exports = {
                             res.send({status:true,data:"注册成功",username:username});
                         });
                     }
-                });
+                }});
+
             }
         });
 
@@ -85,7 +85,7 @@ module.exports = {
         app.post("/getRess",(req,res)=>{
             let username = req.body.username;
             console.log(req.body)
-            db.select(`select * from address where userId = ${username}`,function(result){
+            db.select({_sql:`select * from address where userId = ${username}` ,_callback:function(result){
                 console.log(result)
                 if(result.status){
                     console.log(result.data);
@@ -93,7 +93,7 @@ module.exports = {
                 }else{
                     res.send({status:false,data:"该用户不存在"});
                 }
-            })
+            }});
         })
 
         /*用户添加收货地址*/
@@ -114,7 +114,7 @@ module.exports = {
             console.log(req.body)
             let userId = req.body.userId;
             let id = req.body.id;
-            db.select(`select * from address where userId = ${userId} and id = ${id}`,function(result){
+            db.select({_sql:`select * from address where userId = ${userId} and id = ${id}` ,_callback:function(result){
                 console.log(result.status)
                 if(result.status){
                     db.delete(`delete from address where userId = ${userId} and id = ${id}`,function(result){
@@ -126,7 +126,7 @@ module.exports = {
                 }else{
                     res.send({status:false,data:"该地址不存在"});
                 }
-            })
+            }});
         });
 
         /*用户修改收货地址*/
@@ -137,7 +137,7 @@ module.exports = {
             let cnee = req.body.cnee;
             let phone = req.body.phone;
             let ress = req.body.ress;
-            db.select(`select * from address where userId = ${userId} and id = ${id}`,function(result){
+            db.select({_sql:`select * from address where userId = ${userId} and id = ${id}`,_callback:function(result){
                 console.log(result.status);
                 if(result.status){
                     db.update(`update address set cnee = "${cnee}",phone = ${phone},ress = "${ress}" where userId = ${userId} and id = ${id}`,function(result){
@@ -147,7 +147,7 @@ module.exports = {
                 }else{
                     res.send({status:result.status,data:"该地址不存在"});
                 }
-            })
+            }});
         })
     }
 }

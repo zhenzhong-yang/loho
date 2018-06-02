@@ -12,9 +12,11 @@ const db = mysql.createPool({
 
 
 module.exports = {
-    select: function(_sql, _callback){
-        db.query(_sql, function(error, results,fields){
-           // console.log(results);
+    // select: function(_sql,data, _callback){
+    select: function({_sql,data,_callback}){
+
+        db.query(_sql,data, function(error, results,fields){
+           console.log(results);
             if(error || results.length == 0){
                 _callback({status: false, error: error})
             }else if(results.length > 0){

@@ -1,6 +1,7 @@
 <template>
     <div id="goods">
-        <!-- <div id="search"><input type="text" placeholder="LOHO"  v-model="search" /><span @click="Search()">搜索</span></div> -->
+        <div id="search"><input type="text" placeholder="LOHO"  v-model="search" /><span @click="Search()">搜索</span><span id="addGoods" @click="add()">添加</span></div>
+        <!-- <div id="addGoods"></div> -->
         <table>
             <thead>
                 <tr>
@@ -22,7 +23,7 @@
                     <td>{{item.isNew}}</td>
                     <td>{{item.title}}</td>
                     <td>{{item.field}}</td>
-                    <td><span id="del">删除</span><span id="edit" @click="Compile(item)">编辑</span></td>
+                    <td><span id="del" @click="delgoods(item)">删除</span><span id="edit" @click="Compile(item)">编辑</span></td>
                 </tr>
             </tbody>
         </table>
@@ -37,11 +38,11 @@
             </div>
             <div>
                 <label> 商品标识 ：</label>
-                <input type="text" placeholder="商品id" v-model="goods.goodsId"/>
+                <input type="text" placeholder="商品id" v-model="goods.goodsId" readonly/>
             </div>
             <div>
                 <label> 售出数量 ：</label>
-                <input type="text" placeholder="商品已售出数量" v-model="goods.salesNum"/>
+                <input type="text" placeholder="商品已售出数量" v-model="goods.salesNum" readonly/>
             </div>
             <div>
                 <label> 热门商品 ：</label>
@@ -59,6 +60,35 @@
                 <span @click="save">保存</span><span @click="cancel()">取消</span>
             </div>
         </div>
+        <div class="pop" v-show="addPop">
+            <div>
+                <label> 图片地址 ：</label>
+                <input type="text" placeholder="图片地址" v-model="addgoods.img"/>
+            </div>
+            <div>
+                <label> 商品价格 ：</label>
+                <input type="text" placeholder="商品价格" v-model="addgoods.price"/>
+            </div>
+            <div>
+                <label> 售出数量 ：</label>
+                <input type="text" placeholder="商品已售出数量" v-model="addgoods.salesNum"/>
+            </div>
+            <div>
+                <label> 热门商品 ：</label>
+                <input type="text" placeholder="是否热门商品" v-model="addgoods.isNew"/>
+            </div>
+            <div>
+                <label> 商品名称 ：</label>
+                <input type="text" placeholder="商品名称" v-model="addgoods.title"/>
+            </div>
+            <div>
+                <label> 商品类型 ：</label>
+                <input type="text" placeholder="商品类型" v-model="addgoods.field"/>
+            </div>
+            <div>
+                <span @click="addSave">保存</span><span @click="cancel()">取消</span>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -71,7 +101,17 @@
                 data:[],
                 search:'',
                 pop:false,
+                addPop:false,
                 goods:{
+                    img:'',
+                    price:'',
+                    goodsId:'',
+                    salesNum:'',
+                    isNew:'',
+                    title:'',
+                    field:''
+                },
+                addgoods:{
                     img:'',
                     price:'',
                     goodsId:'',
@@ -83,14 +123,10 @@
             }
         },
         mounted(){
-            
-            // if(this.search.length == 0){
-                http.get("/serverGoods").then((res)=>{
-                    console.log(res)
-                    this.data = res.results;
-                });
-            // }
-
+            http.get("/serverGoods").then((res)=>{
+                console.log(res)
+                this.data = res.results;
+            });
         },
         methods:{
             Search(){
@@ -126,6 +162,36 @@
             },
             cancel(){
                 this.pop = false;
+                this.addPop = false;
+            },
+            add(){
+                console.log(666);
+                this.addPop = true;
+
+            },
+            addSave(){
+                this.addPop = false;
+                console.log(this.addgoods)
+                http.get("/addGoods",this.addgoods).then((res)=>{
+                    console.log(res);
+                    if(res.status){
+                        http.get("/serverGoods").then((res)=>{
+                            console.log(res)
+                            this.data = res.results;
+                        });
+                    }
+                })
+            },
+            delgoods(item){
+                http.get("/del",{goodsId:item.goodsId}).then((res)=>{
+                    console.log(res);
+                    if(res.status){
+                        http.get("/serverGoods").then((res)=>{
+                            console.log(res)
+                            this.data = res.results;
+                        });
+                    }
+                })
             }
         }
     }

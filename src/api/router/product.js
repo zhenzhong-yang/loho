@@ -8,14 +8,14 @@ module.exports = {
             let username = 1234567890;
             // let goodsid = Number(req.body.goodsId);
             // console.log(username,goodsid);
-            db.select(`select * from cart where userId = ${username} `,(result)=>{
+            db.select({_sql:`select * from cart where userId = ${username} `,_callback:(result)=>{
                 console.log(result)
                 if(result.status){
                     res.send(result.data);
                 }else{
                     res.send({status:false});
                 }
-            });
+            }});
         }),
 
         /*删除购车商品*/
@@ -49,10 +49,8 @@ module.exports = {
             let Qty = Number(req.body.qty);
             let color = req.body.color;
 
-            db.select(`select * from cart where userId = ${userId} and goodsId = ${goodsId}`,(result)=>{
-
+            db.select({_sql:`select * from cart where userId = ${userId} and goodsId = ${goodsId}`,_callback:(result)=>{
                 console.log(result.status)
-                
                 if(result.status){
                     console.log("已有数据");
                     db.update(`update cart set cart.qty = cart.qty+${Qty} where userId = ${userId} and goodsId = ${goodsId} `,(result)=>{
@@ -66,7 +64,7 @@ module.exports = {
                         res.send({status:result.status,datd:"插入成功"});
                     });
                 }
-            });
+            }});
         }),
         
         /*获取商品数据*/
@@ -78,15 +76,15 @@ module.exports = {
             console.log( typeof goodsId);
 
             if((typeof field) == 'string'){
-                db.select(`select * from goods where field = "${field}"`,(result)=>{
+                db.select({_sql:`select * from goods where field = "${field}"`,_callback:(result)=>{
                     console.log(result.data)
                     res.send(result.data);
-                });
+                }});
             }else if((typeof goodsId) == 'number'){
-                db.select(`select * from goods where goodsId = ${goodsId}`,(result)=>{
+                db.select({_sql:`select * from goods where goodsId = ${goodsId}`,_callback:(result)=>{
                     console.log(result.data)
                     res.send(result.data);
-                });
+                }});
             }else{
                 res.send({status:false,data:"您的参数可能不正确，请重新确认"});
             }
@@ -98,23 +96,23 @@ module.exports = {
             let status = req.query.status;
             console.log(req.query.field)
             if(status == 1){
-                db.select(`select * from goods where field = "${field}" order by price asc`,function(result){
+                db.select({_sql:`select * from goods where field = "${field}" order by price asc`,_callback:function(result){
                     console.log(result.status)
                     if(result.status){
                         res.send(result.data)
                     }else{
                         res.send({status:false,data:"不存在的"});
                     }
-                })
+                }});
             }else if(status == 0){
-                db.select(`select * from goods where field = "${field}" order by price desc`,function(result){
+                db.select({_sql:`select * from goods where field = "${field}" order by price desc`,_callback:function(result){
                     console.log(result.status)
                     if(result.status){
                         res.send(result.data)
                     }else{
                         res.send({status:false,data:"不存在的"});
                     }
-                })
+                }});
             }else{
                 res.send({status:false,data:"你确定你是在排序吗"});
             }
@@ -126,23 +124,23 @@ module.exports = {
             let status = req.query.status;
             console.log(req.query.field)
             if(status == 1){
-                db.select(`select * from goods where field = "${field}" order by salesNum asc`,function(result){
+                db.select({_sql:`select * from goods where field = "${field}" order by salesNum asc`,_callback:function(result){
                     // console.log(result.status)
                     if(result.status){
                         res.send(result.data)
                     }else{
                         res.send({status:false,data:"不存在的"});
                     }
-                })
+                }});
             }else if(status == 0){
-                db.select(`select * from goods where field = "${field}" order by salesNum desc`,function(result){
+                db.select({_sql:`select * from goods where field = "${field}" order by salesNum desc`,_callback:function(result){
                     console.log(result.status)
                     if(result.status){
                         res.send(result.data)
                     }else{
                         res.send({status:false,data:"不存在的"});
                     }
-                })
+                }});
             }else{
                 res.send({status:false,data:"你确定你是在排序吗"});
             }

@@ -1,5 +1,6 @@
 <template>
-    <div class="j_nav">
+    <nav class="menu-activea">
+        <h1>Menu</h1>
         <ul>
             <router-link to="/server/user">
                 <li>
@@ -13,24 +14,40 @@
                     商品管理
                 </li>
             </router-link>
-<!--             <router-link to="order">
-                <li>
-                    <i class="icon iconfont icon-weibiaoti3"></i>
-                    订单管理
-                </li>
-            </router-link>
-             <router-link to="other">
-                <li>
-                    <i class="icon iconfont icon-qita"></i>
-                    其他设置
-                </li>
-            </router-link> -->
         </ul>
-
-    </div>
+    </nav>
 </template>
 
 <script>
     import './nav.scss'
-    export default {}
+    export default {
+        mounted(){
+            var nav = $('nav'),
+              menu = $('nav h1'),
+              main = $('main'),
+              open = false,
+              hover = false;
+
+            menu.on('click', function() {
+                  open = !open ? true : false;
+              nav.toggleClass('menu-active');
+              main.toggleClass('menu-active');
+              nav.removeClass('menu-hover');
+              main.removeClass('menu-hover');
+              console.log(open);
+              console.log(666)
+            });
+            menu.hover( 
+              function() {
+                if (!open) {
+                  nav.addClass('menu-hover');
+                  main.addClass('menu-hover');
+                }
+              }, function() {
+                nav.removeClass('menu-hover');
+                main.removeClass('menu-hover');
+              }
+            );
+        }
+    }
 </script>
